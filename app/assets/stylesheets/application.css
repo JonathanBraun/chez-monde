@@ -24,14 +24,21 @@
    padding: 0;
  }
 
+ body {
+   background-image: url('felix-russell-saw-167176_web.png');
+   background-size:cover;
+   background-repeat: no-repeat;
+ }
+
  h1 {
    font-size: 100px;
    text-align: center;
+   margin: 15px;
  }
  /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
  #map {
    margin: auto;
-   height: 90%;
-   width: 90%;
+   height: 80%;
+   width: 80%;
  }
