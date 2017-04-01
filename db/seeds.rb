@@ -81,7 +81,7 @@ worlds_best = {
       ,
       {name: "Vendôme", chef: "Joachim Wissler", address: "Althoff Grandhotel Schloss Bensberg, Kadettenstrasse", city: "Bergisch Gladbach", zip: "51429", country: "Germany", latitude: "50.9663", longitude: "7.1607", rank: 35}
       ,
-      {name: Boragó (Santiago Chile), , chef: , address: , city: , zip: , country: , latitude: , longitude: , rank: 36}
+      {name: "Boragó", , chef: "Rodolfo Guzmán", address: "Av. Nueva Costanera 3467" , city: "Santiago", zip: , country: "Chile", latitude: "-33.4044", longitude: "-70.5984", rank: 36}
       ,
       {name: Nahm (Bangkok Thailand), , chef: , address: , city: , zip: , country: , latitude: , longitude: , rank: 37}
       ,
