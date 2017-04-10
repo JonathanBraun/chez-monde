@@ -8,6 +8,22 @@
 # # List.create(year: "2016", rank:  )
 #
 #
+
+
+31. Alleno Paris au Pavillon Ledoyen (Paris) *highest new entry*
+Restaurant.create!( name: "Alléno Paris au Pavillon Ledoyen", chef: "Yannick Alléno", address: "8 Avenue Dutuit" , city: "Paris", zip: "75008", country: "France", latitude: "48.8661", longitude: "2.3165" )
+40. Cosme (New York) *new*
+Restaurant.create!( name: "Cosme", chef: "Daniela Soto-Innes", address: "35 E 21st St" , city: "New York City", zip: "10010", country: "United States", latitude: "40.7396", longitude: "-73.9884" )
+43. Reale (Castel di Sangro, Italy) *new*
+Restaurant.create!( name: "Reale", chef: "Niko Romito", address: "Piana Santa Liberata" , city: "Castel di Sangro", zip: "67031", country: "Italy", latitude: "41.774772", longitude: "14.093350" )
+44. Brae (Birregurra, Australia) *new*
+Restaurant.create!( name: "Brae", chef: "Dan Hunter", address: "4285 Cape Otway Rd." , city: "Birregurra", zip: "3242", country: "Australia", latitude: "-38.3469", longitude: "-143.8072" )
+45. Den (Tokyo) *new*
+Restaurant.create!( name: "Den", chef: "Zaiyu Hasegawa", address: "2-3-18 Jingumae Shibuya-ku", city: "Tokyo", zip: "150-0001", country: "Japan", latitude: "35.673170", longitude: "139.712714" )
+49. Tegui (Buenos Aires) *new*
+Restaurant.create!( name: "Tegui", chef: "Germán Martitegui", address: "Costa Rica 5852" , city: "Buenos Aires", zip: "C1414BTJ", country: "Argentina", latitude: "-34.580709", longitude: "-58.437267" )
+
+
 # Restaurant.create!( name: "Osteria Francescana", chef:"Massimo Bottura", address: "Via Stella, 22", city: "Modena", zip: "41121", country: "Italy", latitude: "44.644796",longitude: "10.921521" )
 # Restaurant.create!( name: "El Celler de Can Roca", chef:"Joan Roca", address: "Can Sunyer, 48", city: "Girona", zip: "17007", country: "Spain", latitude: "41.993289", longitude:"2.807959" )
 # Restaurant.create!( name: "Eleven Madison Park", chef: "Daniel Humm", address: "11 Madison Avenue" , city: "New York City", zip: "10010", country: "United States", latitude: "40.7417", longitude: "-73.9872" )
@@ -177,11 +193,11 @@
 #
 # 50. Hof Van Cleve (Kruishoutem, Belgium)
 #   },
-# #   "2016" = {
-# #     Restaurant.create([
-# #       {name: "Osteria Francescana", chef:"Massimo Bottura", address: "Via Stella, 22", city: "Modena", zip: "41121", country: "Italy", latitude: "44.644796",longitude: "10.921521", rank: 1 }
-# #       ,
-# #       {name: "El Celler de Can Roca", chef:"Joan Roca", address: "Can Sunyer, 48", city: "Girona", zip: "17007", country: "Spain", latitude: "41.993289", longitude:"2.807959",rank: 2}
+  "2016" = {
+    Restaurant.create([
+      {name: "Osteria Francescana", chef:"Massimo Bottura", address: "Via Stella, 22", city: "Modena", zip: "41121", country: "Italy", latitude: "44.644796",longitude: "10.921521", rank: 1 }
+      ,
+      {name: "El Celler de Can Roca", chef:"Joan Roca", address: "Can Sunyer, 48", city: "Girona", zip: "17007", country: "Spain", latitude: "41.993289", longitude:"2.807959",rank: 2}
 # #       ,
 # #       {name: "Eleven Madison Park",  chef: "Daniel Humm", address: "11 Madison Avenue" , city: "New York City", zip: "10010", country: "United States", latitude: "40.7417", longitude: "-73.9872", rank: 3}
 # #       ,
