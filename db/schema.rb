@@ -10,26 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170409203642) do
+ActiveRecord::Schema.define(version: 20170410202241) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lists", force: :cascade do |t|
+  create_table "ranks", force: :cascade do |t|
     t.string  "year",          null: false
-    t.integer "restaurant_id", null: false
     t.integer "rank",          null: false
+    t.integer "restaurant_id", null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "name",      null: false
-    t.string "chef",      null: false
-    t.string "address",   null: false
-    t.string "city",      null: false
-    t.string "zip"
-    t.string "country",   null: false
-    t.string "latitude",  null: false
-    t.string "longitude", null: false
+    t.string  "name",      null: false
+    t.string  "chef",      null: false
+    t.string  "address",   null: false
+    t.string  "city",      null: false
+    t.string  "zip"
+    t.string  "country",   null: false
+    t.string  "latitude",  null: false
+    t.string  "longitude", null: false
+    t.integer "list_id"
+    t.index ["list_id"], name: "index_restaurants_on_list_id", using: :btree
   end
 
 end

@@ -9,6 +9,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
       t.string :country, null: false
       t.string :latitude, null: false
       t.string :longitude, null: false
+      t.belongs_to :list
     end
   end
 end
