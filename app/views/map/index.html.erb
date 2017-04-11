@@ -1,6 +1,5 @@
 <h1>Chez Monde</h1>
 
-
 <div id="map"></div>
     <script>
     var map;
@@ -52,3 +51,18 @@
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQXI9xAei5zfhdUNVSEb31tSVV5s5_fw&libraries=visualization&callback=initMap">
     </script>
+
+    <h3> 2016 Restaurants </h3>
+    <ol>
+    <% @restaurants2016.each do |restaurant| %>
+      <li><%= restaurant.name  %></li>
+    <% end %>
+    </ol>
+    <br>
+    <br>
+    <h3> 2017 Restaurants </h3>
+    <ol>
+    <% @restaurants2017.each do |restaurant| %>
+      <li><%= restaurant.name  %></li>
+    <% end %>
+    </ol>
