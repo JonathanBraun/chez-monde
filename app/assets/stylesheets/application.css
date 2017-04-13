@@ -28,6 +28,7 @@
    background-image: url('felix-russell-saw-167176_web.png');
    background-size:cover;
    background-repeat: no-repeat;
+
  }
 
  h1 {
@@ -42,3 +43,57 @@
    height: 80%;
    width: 80%;
  }
+
+ table, th, td, thead th, thead td, tfoot th, tfoot td {
+    text-align: center;
+    /*color: white;*/
+    background: none;
+    border: 2px solid #282828;
+}
+
+table {
+  display: inline-block;
+}
+
+
+table.one {
+  width: 300px;
+  display:inline-block;
+  margin: auto;
+  background-position: center;
+  padding-bottom: 0px;
+  font-family: Futura;
+  height: auto;
+  background-color: #181818;
+  background-size: auto;
+}
+
+table.two {
+  width: 300px;
+  display:inline-block;
+  margin: auto;
+  background-position: center;
+  padding-bottom: 0px;
+  font-family: Futura;
+  height: auto;
+  background-color: #181818;
+  background-size: auto;
+}
+
+td {
+  font-size: 16px;
+  background-color: none;
+  /*line-height: 0.5px;*/
+  height: 0px;
+}
+
+thead {
+  max-width: auto;
+  font-size: 16px;
+  background-color: none;
+}
+
+th {
+  background-color: none;
+  padding-bottom: 10px;
+}
