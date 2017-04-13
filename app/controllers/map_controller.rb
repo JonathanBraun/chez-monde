@@ -6,7 +6,6 @@ class MapController < ApplicationController
       @restaurants2016 = restaurant_ids_2016.map{|id| Restaurant.find(id)}
       @restaurants2017 = restaurant_ids_2017.map{|id| Restaurant.find(id)}
 
-
     end
 
 end
