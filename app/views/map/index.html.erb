@@ -7,7 +7,6 @@
 
   function plotMarkers(m)
   {
-    debugger;
     markers = [];
     bounds = new google.maps.LatLngBounds();
     m.forEach(function (marker) {
@@ -28,12 +27,11 @@
       );
       bounds.extend(position);
     });
-
+    infowindows(markers);
     map.fitBounds(bounds);
   }
-  function infowindows() {
-    markers.forEach((marker) => {
-      console.log(marker);
+  function infowindows(m) {
+    m.forEach((marker) => {
       var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
@@ -65,8 +63,9 @@
         return restaurants;
 
       })
-      .then(plotMarkers)
-      .then(infowindows)
+      .then(plotMarkers);
+
+      // .then(infowindows)
 
 
       map = new google.maps.Map(document.getElementById('map'), {
