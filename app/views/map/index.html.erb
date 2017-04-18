@@ -7,10 +7,12 @@
 
   function plotMarkers(m)
   {
+    var rank = 0
     markers = [];
     bounds = new google.maps.LatLngBounds();
     m.forEach(function (marker) {
-
+      debugger;
+      rank += 1
       var position = new google.maps.LatLng(marker.latitude, marker.longitude);
 
       markers.push(
@@ -19,9 +21,11 @@
           map: map,
           title: marker.name,
           animation: google.maps.Animation.DROP,
-          rank: marker.rank,
-          year: marker.year,
-          chef: marker.chef
+          address: marker.address,
+          chef: marker.chef,
+          rank: rank,
+          city: marker.city,
+          country: marker.country
         })
 
       );
@@ -31,15 +35,17 @@
     map.fitBounds(bounds);
   }
   function infowindows(m) {
+
     m.forEach((marker) => {
+
       var contentString = '<div id="content">'+
               '<div id="siteNotice">'+
               '</div>'+
-              '<h1 id="firstHeading" class="firstHeading">' + `${marker.title}` + '</h1>'+
+              '<h3>' + `${marker.title}` + '</h3>'+
               '<div id="bodyContent">'+
               '<p>Chef(s):' + ` ${marker.chef}` + '</p>'+
-              '<p>Rank: ' + `${marker.rank}` + '</p>'+
-              '<p>Year: ' + `${marker.year}` + '</p>'+
+              `<p>Rank: ` + `${marker.rank}` + '</p>'+
+              '<p>Address: ' + `${marker.address}` + '</p>' + '<p>City/Country: ' + `${marker.city}` + `, ${marker.country}` + '</p>'+
               '</div>'+
               '</div>';
 
@@ -65,9 +71,6 @@
       })
       .then(plotMarkers);
 
-      // .then(infowindows)
-
-
       map = new google.maps.Map(document.getElementById('map'), {
         zoom: 2,
         center: {lat: 0.865427, lng: 0.196123},
@@ -78,27 +81,6 @@
       var bounds;
       var infowindow;
 
-      // markers.forEach(function (marker) {
-      //   // var contentString = '<div id="content">'+
-      //   //       '<div id="siteNotice">'+
-      //   //       '</div>'+
-      //   //       '<h1 id="firstHeading" class="firstHeading">#{marker.name}</h1>'+
-      //   //       '<div id="bodyContent">'+
-      //   //       '<p>Chef(s): #{marker.chef}</p>'+
-      //   //       '<p>Rank: #{marker.rank}</p>'+
-      //   //       '<p>Year: #{marker.year}</p>'+
-      //   //       '</div>'+
-      //   //       '</div>';
-      //   //
-      //   var infowindow = new google.maps.InfoWindow({
-      //     content: "Can you see me?"
-      //   });
-      //
-      //
-      //   marker.addListener('click', function() {
-      //     infowindow.open(map, marker);
-      //   });
-      // }
     }
 
     </script>
