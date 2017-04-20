@@ -1,4 +1,6 @@
-<img src=<%= image_url("Chez_Monde_Placeholder_01.png") %> width="700px"/>
+<div id="logo">
+  <img src=<%= image_url("Chez_Monde_Placeholder_01.png") %> />
+</div>
 
 
 
@@ -13,7 +15,6 @@
     markers = [];
     bounds = new google.maps.LatLngBounds();
     m.forEach(function (marker) {
-      debugger;
       rank += 1
       var position = new google.maps.LatLng(marker.latitude, marker.longitude);
 
@@ -94,36 +95,37 @@
     <br>
     <br>
     <br>
-
-    <table className="one">
-      <thead>
-        <tr>
-           <th>2016 Restaurants </th>
-        </tr>
-      </thead>
-      <tbody>
-          <% @restaurants2016.each_with_index do |restaurant, index| %>
+    <div id="table">
+      <table className="one">
+        <thead>
           <tr>
-            <td><%= index + 1 %>. <%= restaurant.name %></td>
-
+             <th>2016 Restaurants </th>
           </tr>
-          <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+            <% @restaurants2016.each_with_index do |restaurant, index| %>
+            <tr>
+              <td><%= index + 1 %>. <%= restaurant.name %></td>
 
-    <table className="two">
-      <thead>
-        <tr>
-           <th>2017 Restaurants </th>
-        </tr>
-      </thead>
-      <tbody>
-          <% @restaurants2017.each_with_index do |restaurant, index| %>
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+
+      <table className="two">
+        <thead>
           <tr>
-
-            <td><%= index + 1 %>. <%= restaurant.name %></td>
-
+             <th>2017 Restaurants </th>
           </tr>
-          <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+            <% @restaurants2017.each_with_index do |restaurant, index| %>
+            <tr>
+
+              <td><%= index + 1 %>. <%= restaurant.name %></td>
+
+            </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
