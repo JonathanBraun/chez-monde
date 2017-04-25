@@ -7,7 +7,6 @@
 <div id="map"></div>
   <script>
   var map;
-  // var image = 'http://www.turcuisine.com/images/fork.svg';
 
   function plotMarkers(m)
   {
@@ -91,41 +90,57 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQXI9xAei5zfhdUNVSEb31tSVV5s5_fw&libraries=visualization&callback=initMap">
     </script>
 
+    <!-- <script>
+      $(document).ready(function(){
+        $("#slider").slider({
+            min: 2014,
+            max: 2017,
+            step: 1,
+            range: false,
+            slide: function(event, ui) {
+                $("#someotherElement").removeClass().addClass('step_'+ui.value); //adds class step_1 -> step_10 etc
+            }
+        });​
+      });
+    </script> -->
+
     <br>
     <br>
     <br>
     <br>
-    <div id="table">
-      <table className="one">
-        <thead>
-          <tr>
-             <th>2016 Restaurants </th>
-          </tr>
-        </thead>
-        <tbody>
-            <% @restaurants2016.each_with_index do |restaurant, index| %>
+    <div>
+      <div class="tables">
+        <table className="one">
+          <thead>
             <tr>
-              <td><%= index + 1 %>. <%= restaurant.name %></td>
-
+               <th>2016 Restaurants </th>
             </tr>
-            <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+              <% @restaurants2016.each_with_index do |restaurant, index| %>
+              <tr>
+                <td><%= index + 1 %>. <%= restaurant.name %></td>
 
-      <table className="two">
-        <thead>
-          <tr>
-             <th>2017 Restaurants </th>
-          </tr>
-        </thead>
-        <tbody>
-            <% @restaurants2017.each_with_index do |restaurant, index| %>
+              </tr>
+              <% end %>
+          </tbody>
+        </table>
+
+        <table className="two">
+          <thead>
             <tr>
-
-              <td><%= index + 1 %>. <%= restaurant.name %></td>
-
+               <th>2017 Restaurants </th>
             </tr>
-            <% end %>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+              <% @restaurants2017.each_with_index do |restaurant, index| %>
+              <tr>
+
+                <td><%= index + 1 %>. <%= restaurant.name %></td>
+
+              </tr>
+              <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
