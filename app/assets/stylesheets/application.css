@@ -89,8 +89,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .parallax__layer {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -103,6 +104,24 @@ h2 {
   transform: translateZ(-1px) scale(2);
   /*background-image: url("food/annie-spratt-44241.jpg");*/
   width: auto;
+}
+
+.parallax__footer {
+  perspective: 1px;
+  /*height: 100vh;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* The image used */
+  background-image: url("food/karlis-dambrans-117428.jpg");
+
+  /* Set a specific height */
+  height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
  table, th, td, thead th, thead td, tfoot th, tfoot td {

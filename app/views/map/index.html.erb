@@ -8,16 +8,17 @@
   </div>
 </div>
 
-<div style="height:1000px;background-color: #303b4c;">
-<br>
-<br>
+<div style="height:800px;background-color: #303b4c;">
 <br>
 <h2>A Map of The World's</h2>
 <h2> 50 Best Restaurants</h2>
 <br>
+<div>
+  <%= f.range_field :year, in: 2015..2017 %>
+</div>
+<%= render 'form' %>
 <br>
-<br>
-<br>
+
   <div id="map"></div>
     <script>
     var map;
@@ -126,8 +127,8 @@
     <br>
     <br>
     <br>
-    <div>
-      <div class="parallax">
+    <!-- <div>
+      <div class="parallax__footer"> -->
         <!-- <table className="one">
           <thead>
             <tr>
@@ -160,5 +161,5 @@
               <% end %>
           </tbody>
         </table> -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
