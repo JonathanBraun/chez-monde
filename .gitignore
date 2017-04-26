@@ -18,3 +18,7 @@
 
 # Ignore ENV file
 .env
+
+
+
+.DS_Store

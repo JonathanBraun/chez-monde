@@ -39,15 +39,18 @@
  }
 
 h2 {
+  padding: 0;
   text-align: center;
-  font-size: 40px;
+  font-size: 44px;
   color: #BA9F4A;
+  margin: 0;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
 }
+
 
  /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
@@ -58,7 +61,7 @@ h2 {
  }
 
  #logo img {
-   width: 400px;
+   width: 600px;
    background-position: center;
    display: block;
    margin-left: auto;
@@ -78,7 +81,7 @@ h2 {
   background-image: url("food/annie-spratt-44241.jpg");
 
   /* Set a specific height */
-  height: 500px;
+  height: 880px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
