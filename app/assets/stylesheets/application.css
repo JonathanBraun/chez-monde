@@ -37,6 +37,18 @@
    text-align: center;
    margin: 15px;
  }
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #BA9F4A;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
  /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
  #map {
@@ -51,9 +63,44 @@
    display: block;
    margin-left: auto;
    margin-right: auto;
-   padding-top: 20px;
+   padding-top: 50px;
    padding-bottom: 20px;
  }
+
+
+
+.parallax {
+  perspective: 1px;
+  /*height: 100vh;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* The image used */
+  background-image: url("food/annie-spratt-44241.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+  /*background-image: url("food/annie-spratt-44241.jpg");*/
+  width: auto;
+}
 
  table, th, td, thead th, thead td, tfoot th, tfoot td {
     text-align: center;

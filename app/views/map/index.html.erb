@@ -1,108 +1,126 @@
-<div id="logo">
-  <img src=<%= image_url("Chez_Monde_02-02.png") %> />
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--back">
+  </div>
+  <div class="parallax__layer parallax__layer--base">
+    <div id="logo">
+      <img src=<%= image_url("Chez_Monde_02-02.png") %> />
+    </div>
+
+  </div>
+</div>
+
+<div style="height:1000px;background-color: #303b4c;">
+<br>
+<br>
+<br>
+<h2>The World's 50 Best Restaurants</h2>
+<br>
+<br>
+<br>
+<br>
+  <div id="map"></div>
+    <script>
+    var map;
+
+    function plotMarkers(m)
+    {
+      var rank = 0
+      markers = [];
+      bounds = new google.maps.LatLngBounds();
+      m.forEach(function (marker) {
+        rank += 1
+        var position = new google.maps.LatLng(marker.latitude, marker.longitude);
+
+        markers.push(
+          new google.maps.Marker({
+            position: position,
+            map: map,
+            title: marker.name,
+            animation: google.maps.Animation.DROP,
+            address: marker.address,
+            chef: marker.chef,
+            rank: rank,
+            city: marker.city,
+            country: marker.country
+          })
+
+        );
+        bounds.extend(position);
+      });
+      infowindows(markers);
+      map.fitBounds(bounds);
+    }
+    function infowindows(m) {
+
+      m.forEach((marker) => {
+
+        var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h3>' + `${marker.title}` + '</h3>'+
+                '<div id="bodyContent">'+
+                '<p>Chef(s):' + ` ${marker.chef}` + '</p>'+
+                `<p>Rank: ` + `${marker.rank}` + '</p>'+
+                '<p>Address: ' + `${marker.address}` + '</p>' + '<p>City/Country: ' + `${marker.city}` + `, ${marker.country}` + '</p>'+
+                '</div>'+
+                '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      })
+
+
+    };
+
+    function initMap() {
+      fetch("/api/v1/markers/",
+        { credentials: "include"})
+        .then((response) => {
+          let restaurants = response.json();
+          return restaurants;
+
+        })
+        .then(plotMarkers);
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: 0.865427, lng: 0.196123},
+          mapTypeId: 'satellite'
+        });
+
+        var markers;
+        var bounds;
+        var infowindow;
+
+      }
+
+      </script>
+      <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQXI9xAei5zfhdUNVSEb31tSVV5s5_fw&libraries=visualization&callback=initMap">
+      </script>
+
+      <!-- <script>
+        $(document).ready(function(){
+          $("#slider").slider({
+              min: 2014,
+              max: 2017,
+              step: 1,
+              range: false,
+              slide: function(event, ui) {
+                  $("#someotherElement").removeClass().addClass('step_'+ui.value); //adds class step_1 -> step_10 etc
+              }
+          });​
+        });
+      </script> -->
+
 </div>
 
 
-
-<div id="map"></div>
-  <script>
-  var map;
-
-  function plotMarkers(m)
-  {
-    var rank = 0
-    markers = [];
-    bounds = new google.maps.LatLngBounds();
-    m.forEach(function (marker) {
-      rank += 1
-      var position = new google.maps.LatLng(marker.latitude, marker.longitude);
-
-      markers.push(
-        new google.maps.Marker({
-          position: position,
-          map: map,
-          title: marker.name,
-          animation: google.maps.Animation.DROP,
-          address: marker.address,
-          chef: marker.chef,
-          rank: rank,
-          city: marker.city,
-          country: marker.country
-        })
-
-      );
-      bounds.extend(position);
-    });
-    infowindows(markers);
-    map.fitBounds(bounds);
-  }
-  function infowindows(m) {
-
-    m.forEach((marker) => {
-
-      var contentString = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<h3>' + `${marker.title}` + '</h3>'+
-              '<div id="bodyContent">'+
-              '<p>Chef(s):' + ` ${marker.chef}` + '</p>'+
-              `<p>Rank: ` + `${marker.rank}` + '</p>'+
-              '<p>Address: ' + `${marker.address}` + '</p>' + '<p>City/Country: ' + `${marker.city}` + `, ${marker.country}` + '</p>'+
-              '</div>'+
-              '</div>';
-
-      var infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-    })
-
-
-  };
-
-  function initMap() {
-    fetch("/api/v1/markers/",
-      { credentials: "include"})
-      .then((response) => {
-        let restaurants = response.json();
-        return restaurants;
-
-      })
-      .then(plotMarkers);
-
-      map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 2,
-        center: {lat: 0.865427, lng: 0.196123},
-        mapTypeId: 'satellite'
-      });
-
-      var markers;
-      var bounds;
-      var infowindow;
-
-    }
-
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvQXI9xAei5zfhdUNVSEb31tSVV5s5_fw&libraries=visualization&callback=initMap">
-    </script>
-
-    <!-- <script>
-      $(document).ready(function(){
-        $("#slider").slider({
-            min: 2014,
-            max: 2017,
-            step: 1,
-            range: false,
-            slide: function(event, ui) {
-                $("#someotherElement").removeClass().addClass('step_'+ui.value); //adds class step_1 -> step_10 etc
-            }
-        });​
-      });
-    </script> -->
 
     <br>
     <br>
