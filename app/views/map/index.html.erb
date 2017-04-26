@@ -5,19 +5,20 @@
     <div id="logo">
       <img src=<%= image_url("Chez_Monde_02-02.png") %> />
     </div>
-
   </div>
 </div>
 
-<div style="height:1000px;background-color: #303b4c;">
+<div style="height:800px;background-color: #303b4c;">
 <br>
+<h2>A Map of The World's</h2>
+<h2> 50 Best Restaurants</h2>
 <br>
+<div>
+  <%= f.range_field :year, in: 2015..2017 %>
+</div>
+<%= render 'form' %>
 <br>
-<h2>The World's 50 Best Restaurants</h2>
-<br>
-<br>
-<br>
-<br>
+
   <div id="map"></div>
     <script>
     var map;
@@ -126,9 +127,9 @@
     <br>
     <br>
     <br>
-    <div>
-      <div class="tables">
-        <table className="one">
+    <!-- <div>
+      <div class="parallax__footer"> -->
+        <!-- <table className="one">
           <thead>
             <tr>
                <th>2016 Restaurants </th>
@@ -159,6 +160,6 @@
               </tr>
               <% end %>
           </tbody>
-        </table>
-      </div>
-    </div>
+        </table> -->
+      <!-- </div>
+    </div> -->
