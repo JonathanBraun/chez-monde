@@ -14,9 +14,18 @@
 <h2> 50 Best Restaurants</h2>
 <br>
 <div>
-  <%= f.range_field :year, in: 2015..2017 %>
+  <span>2015</span>
+  <input type="range" min="2015" max="2017" value="2017" step="1" onchange="showValue(this.value)" />
+  <span id="range">2017</span>
+  <script type="text/javascript">
+
+  function showValue(newValue)
+  {
+  	document.getElementById("range").innerHTML=newValue;
+  }
+  </script>
 </div>
-<%= render 'form' %>
+
 <br>
 
   <div id="map"></div>
@@ -127,9 +136,9 @@
     <br>
     <br>
     <br>
-    <!-- <div>
-      <div class="parallax__footer"> -->
-        <!-- <table className="one">
+    <div>
+      <div class="parallax__footer">
+        <table className="one">
           <thead>
             <tr>
                <th>2016 Restaurants </th>
@@ -160,6 +169,6 @@
               </tr>
               <% end %>
           </tbody>
-        </table> -->
-      <!-- </div>
-    </div> -->
+        </table>
+      </div>
+    </div>
