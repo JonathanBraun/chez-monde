@@ -124,6 +124,28 @@ h2 {
   background-size: cover;
 }
 
+#range {
+  text-align: center;
+  color: #BA9F4A;
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+#fifty {
+  width: 80px;
+  background-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  background-position: center;
+  text-align: center;
+  color: #BA9F4A;
+}
+
  table, th, td, thead th, thead td, tfoot th, tfoot td {
     text-align: center;
     /*color: white;*/
