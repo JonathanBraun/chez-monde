@@ -3,7 +3,7 @@
   </div>
   <div class="parallax__layer parallax__layer--base">
     <div id="logo">
-      <img src=<%= image_url("Chez_Monde_02-02.png") %> />
+      <img src=<%= image_url("logos/Chez_Monde_03-02.png") %> />
     </div>
   </div>
 </div>
@@ -41,8 +41,11 @@
       markers = [];
       bounds = new google.maps.LatLngBounds();
       m.forEach(function (marker) {
-        rank += 1
+        rank += 1;
         var position = new google.maps.LatLng(marker.latitude, marker.longitude);
+        console.log(rank);
+        var icon = '<%= image_path `app/assets/Gradient-Pins-v1/Marker_${rank}.png` %>';
+        console.log(icon);
 
         markers.push(
           new google.maps.Marker({
@@ -53,6 +56,7 @@
             address: marker.address,
             chef: marker.chef,
             rank: rank,
+            icon: icon,
             city: marker.city,
             country: marker.country
           })
@@ -142,6 +146,8 @@
 <br>
 <br>
 <a href="http://www.theworlds50best.com/"><img id="fifty" src=<%= image_url("logo-worlds50best.png") %> /></a>
+<br>
+<a href="https://github.com/JonathanBraun/chez-monde"><img id="fifty" src=<%= image_url("github-10-xxl.png") %> /></a>
 <br>
 
 
