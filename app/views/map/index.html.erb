@@ -44,7 +44,8 @@
         rank += 1;
         var position = new google.maps.LatLng(marker.latitude, marker.longitude);
         console.log(rank);
-        var icon = '<%= image_path `app/assets/Gradient-Pins-v1/Marker_${rank}.png` %>';
+        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_${rank}.png' %>`;
+        // var icon = `<%= image_path 'Gradient-Pins-v1/Marker_40.png' %>`;
         console.log(icon);
 
         markers.push(
