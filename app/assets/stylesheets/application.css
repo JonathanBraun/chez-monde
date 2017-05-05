@@ -70,6 +70,36 @@ h2 {
    padding-bottom: 20px;
  }
 
+ .logos-outer {
+   width:100%;
+ }
+
+.logos {
+  max-width: 300px;
+  background-position: center;
+  /*display: inline-flex;*/
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  /*padding-left: 200px;*/
+  max-width: 800px;
+}
+
+.logos img{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+}
+
 
 
 .parallax {
@@ -133,7 +163,8 @@ h2 {
 }
 
 #fifty {
-  width: 80px;
+  /*width: 80px;*/
+  max-height: 80px;
   background-position: center;
   display: block;
   margin-left: auto;
