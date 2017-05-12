@@ -35,17 +35,70 @@
     <script>
     var map;
 
+
     function plotMarkers(m)
     {
       var rank = 0
       markers = [];
+      var gradientPins = [
+        '/assets/Gradient-Pins-v1/Marker_1.png',
+        '/assets/Gradient-Pins-v1/Marker_2.png',
+        '/assets/Gradient-Pins-v1/Marker_3.png',
+        '/assets/Gradient-Pins-v1/Marker_4.png',
+        '/assets/Gradient-Pins-v1/Marker_5.png',
+        '/assets/Gradient-Pins-v1/Marker_6.png',
+        '/assets/Gradient-Pins-v1/Marker_7.png',
+        '/assets/Gradient-Pins-v1/Marker_8.png',
+        '/assets/Gradient-Pins-v1/Marker_9.png',
+        '/assets/Gradient-Pins-v1/Marker_10.png',
+        '/assets/Gradient-Pins-v1/Marker_11.png',
+        '/assets/Gradient-Pins-v1/Marker_12.png',
+        '/assets/Gradient-Pins-v1/Marker_13.png',
+        '/assets/Gradient-Pins-v1/Marker_14.png',
+        '/assets/Gradient-Pins-v1/Marker_15.png',
+        '/assets/Gradient-Pins-v1/Marker_16.png',
+        '/assets/Gradient-Pins-v1/Marker_17.png',
+        '/assets/Gradient-Pins-v1/Marker_18.png',
+        '/assets/Gradient-Pins-v1/Marker_19.png',
+        '/assets/Gradient-Pins-v1/Marker_20.png',
+        '/assets/Gradient-Pins-v1/Marker_21.png',
+        '/assets/Gradient-Pins-v1/Marker_22.png',
+        '/assets/Gradient-Pins-v1/Marker_23.png',
+        '/assets/Gradient-Pins-v1/Marker_24.png',
+        '/assets/Gradient-Pins-v1/Marker_25.png',
+        '/assets/Gradient-Pins-v1/Marker_26.png',
+        '/assets/Gradient-Pins-v1/Marker_27.png',
+        '/assets/Gradient-Pins-v1/Marker_28.png',
+        '/assets/Gradient-Pins-v1/Marker_29.png',
+        '/assets/Gradient-Pins-v1/Marker_30.png',
+        '/assets/Gradient-Pins-v1/Marker_31.png',
+        '/assets/Gradient-Pins-v1/Marker_32.png',
+        '/assets/Gradient-Pins-v1/Marker_33.png',
+        '/assets/Gradient-Pins-v1/Marker_34.png',
+        '/assets/Gradient-Pins-v1/Marker_35.png',
+        '/assets/Gradient-Pins-v1/Marker_36.png',
+        '/assets/Gradient-Pins-v1/Marker_37.png',
+        '/assets/Gradient-Pins-v1/Marker_38.png',
+        '/assets/Gradient-Pins-v1/Marker_39.png',
+        '/assets/Gradient-Pins-v1/Marker_40.png',
+        '/assets/Gradient-Pins-v1/Marker_41.png',
+        '/assets/Gradient-Pins-v1/Marker_42.png',
+        '/assets/Gradient-Pins-v1/Marker_43.png',
+        '/assets/Gradient-Pins-v1/Marker_44.png',
+        '/assets/Gradient-Pins-v1/Marker_45.png',
+        '/assets/Gradient-Pins-v1/Marker_46.png',
+        '/assets/Gradient-Pins-v1/Marker_47.png',
+        '/assets/Gradient-Pins-v1/Marker_48.png',
+        '/assets/Gradient-Pins-v1/Marker_49.png',
+        '/assets/Gradient-Pins-v1/Marker_50.png'
+      ]
       bounds = new google.maps.LatLngBounds();
       m.forEach(function (marker) {
         rank += 1;
         var position = new google.maps.LatLng(marker.latitude, marker.longitude);
         console.log(rank);
-        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_${rank}.png' %>`;
-        // var icon = `<%= image_path 'Gradient-Pins-v1/Marker_40.png' %>`;
+        // var icon = `<%= image_path `Gradient-Pins-v1/Marker_${rank}.png` %>`;
+        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_2.png' %>`;
         console.log(icon);
 
         markers.push(
@@ -57,7 +110,7 @@
             address: marker.address,
             chef: marker.chef,
             rank: rank,
-            icon: icon,
+            icon: gradientPins[rank],
             city: marker.city,
             country: marker.country
           })
