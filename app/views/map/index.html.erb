@@ -35,7 +35,6 @@
     <script>
     var map;
 
-
     function plotMarkers(m)
     {
       var rank = 0
@@ -98,8 +97,12 @@
         var position = new google.maps.LatLng(marker.latitude, marker.longitude);
         console.log(rank);
         // var icon = `<%= image_path `Gradient-Pins-v1/Marker_${rank}.png` %>`;
-        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_2.png' %>`;
+        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_50.png' %>`;
         console.log(icon);
+        var icon = {
+          url: gradientPins[rank],
+          scaledSize: new google.maps.Size(21, 35)
+        };
 
         markers.push(
           new google.maps.Marker({
@@ -110,7 +113,7 @@
             address: marker.address,
             chef: marker.chef,
             rank: rank,
-            icon: gradientPins[rank],
+            icon: icon,
             city: marker.city,
             country: marker.country
           })
