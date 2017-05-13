@@ -52,12 +52,17 @@ h2 {
 }
 
 
+
  /* Always set the map height explicitly to define the size of the div
   * element that contains the map. */
  #map {
    margin: auto;
    height: 80%;
    width: 80%;
+ }
+
+ #map png {
+   
  }
 
  #logo img {
