@@ -89,20 +89,16 @@
         '/assets/Gradient-Pins-v1/Marker_47.png',
         '/assets/Gradient-Pins-v1/Marker_48.png',
         '/assets/Gradient-Pins-v1/Marker_49.png',
-        '/assets/Gradient-Pins-v1/Marker_50.png'
+        "/assets/Gradient-Pins-v1/Marker_50.png",
       ]
       bounds = new google.maps.LatLngBounds();
       m.forEach(function (marker) {
-        rank += 1;
-        var position = new google.maps.LatLng(marker.latitude, marker.longitude);
-        console.log(rank);
-        // var icon = `<%= image_path `Gradient-Pins-v1/Marker_${rank}.png` %>`;
-        var icon = `<%= image_path 'Gradient-Pins-v1/Marker_50.png' %>`;
-        console.log(icon);
         var icon = {
-          url: gradientPins[rank],
+          url: String(gradientPins[rank]),
           scaledSize: new google.maps.Size(21, 35)
         };
+        rank += 1;
+        var position = new google.maps.LatLng(marker.latitude, marker.longitude);
 
         markers.push(
           new google.maps.Marker({
