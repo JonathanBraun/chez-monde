@@ -44,11 +44,11 @@ h2 {
   font-size: 44px;
   color: #BA9F4A;
   margin: 0;
-  text-shadow:
+  /*text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
-  1px 1px 0 #000;
+  1px 1px 0 #000;*/
 }
 
 
@@ -61,9 +61,7 @@ h2 {
    width: 80%;
  }
 
- #map png {
-   
- }
+
 
  #logo img {
    width: 600px;
