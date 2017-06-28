@@ -148,8 +148,12 @@
     };
 
     function initMap() {
+      // var slider = new FormData(document.getElementById())
       fetch("/api/v1/markers/",
-        { credentials: "include"})
+        { credentials: "include",
+          // method: "POST",
+          // body: slider
+        });
         .then((response) => {
           let restaurants = response.json();
           return restaurants;
