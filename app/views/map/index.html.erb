@@ -4,7 +4,9 @@
   <div class="parallax__layer parallax__layer--base">
     <div id="logo">
       <img src=<%= image_url("logos/Chez_Monde_03-02.png") %> />
-      <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+    </div>
+    <div style="text-align:center;">
+      <i class="fa fa-angle-double-down" aria-hidden="true" style="padding-top: 350px;;text-shadow:-1px -1px 0 #000,1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  font-size:100px; color:#BA9F4A;"></i>
     </div>
   </div>
 </div>
@@ -154,7 +156,7 @@
         { credentials: "include",
           // method: "POST",
           // body: slider
-        });
+        })
         .then((response) => {
           let restaurants = response.json();
           return restaurants;
