@@ -1,24 +1,3 @@
-# README
+# Chez Monde (work in process)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A Rails-based site using the Google Maps API to map San Pellegrino's 50 Best Restaurants in the world.  In the process of adding functionality to a slider that will refresh the map and display the top 50 restaurants by year.
